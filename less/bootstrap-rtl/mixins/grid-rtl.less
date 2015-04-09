@@ -1,6 +1,6 @@
-// Grid system
+// RTL Grid system
 //
-// Generate semantic grid columns with these mixins.
+// Generate semantic rtl grid columns with these mixins.
 
 // Centered container element
 .container-fixed(@gutter: @grid-gutter-width) {
@@ -21,20 +21,23 @@
 // Generate the extra small columns
 .make-xxs-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  float: left;
+  float: right;
   width: percentage((@columns / @grid-columns));
   min-height: 1px;
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 }
 .make-xxs-column-offset(@columns) {
-  margin-left: percentage((@columns / @grid-columns));
+  margin-right: percentage((@columns / @grid-columns));
+  margin-left: 0;
 }
 .make-xxs-column-push(@columns) {
-  left: percentage((@columns / @grid-columns));
+  right: percentage((@columns / @grid-columns));
+  left: auto;
 }
 .make-xxs-column-pull(@columns) {
-  right: percentage((@columns / @grid-columns));
+  left: percentage((@columns / @grid-columns));
+  right: auto;
 }
 
 // Generate the extra small columns
@@ -44,23 +47,26 @@
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
   @media (min-width: @screen-xs-min) {
-    float: left;
+    float: right;
     width: percentage((@columns / @grid-columns));
   }
 }
 .make-xs-column-offset(@columns) {
   @media (min-width: @screen-xs-min) {
-    margin-left: percentage((@columns / @grid-columns));
+    margin-right: percentage((@columns / @grid-columns));
+    margin-left: 0;
   }
 }
 .make-xs-column-push(@columns) {
   @media (min-width: @screen-xs-min) {
-    left: percentage((@columns / @grid-columns));
+    right: percentage((@columns / @grid-columns));
+    left: auto;
   }
 }
 .make-xs-column-pull(@columns) {
   @media (min-width: @screen-xs-min) {
-    right: percentage((@columns / @grid-columns));
+    left: percentage((@columns / @grid-columns));
+    right: 0;
   }
 }
 
@@ -72,23 +78,26 @@
   padding-right: (@gutter / 2);
 
   @media (min-width: @screen-sm-min) {
-    float: left;
+    float: right;
     width: percentage((@columns / @grid-columns));
   }
 }
 .make-sm-column-offset(@columns) {
   @media (min-width: @screen-sm-min) {
-    margin-left: percentage((@columns / @grid-columns));
+    margin-right: percentage((@columns / @grid-columns));
+    margin-left: 0;
   }
 }
 .make-sm-column-push(@columns) {
   @media (min-width: @screen-sm-min) {
-    left: percentage((@columns / @grid-columns));
+    right: percentage((@columns / @grid-columns));
+    left: auto;
   }
 }
 .make-sm-column-pull(@columns) {
   @media (min-width: @screen-sm-min) {
-    right: percentage((@columns / @grid-columns));
+    left: percentage((@columns / @grid-columns));
+    right: auto;
   }
 }
 
@@ -100,23 +109,26 @@
   padding-right: (@gutter / 2);
 
   @media (min-width: @screen-md-min) {
-    float: left;
+    float: right;
     width: percentage((@columns / @grid-columns));
   }
 }
 .make-md-column-offset(@columns) {
   @media (min-width: @screen-md-min) {
-    margin-left: percentage((@columns / @grid-columns));
+    margin-right: percentage((@columns / @grid-columns));
+    margin-left: 0;
   }
 }
 .make-md-column-push(@columns) {
   @media (min-width: @screen-md-min) {
-    left: percentage((@columns / @grid-columns));
+    right: percentage((@columns / @grid-columns));
+    left: auto;
   }
 }
 .make-md-column-pull(@columns) {
   @media (min-width: @screen-md-min) {
-    right: percentage((@columns / @grid-columns));
+    left: percentage((@columns / @grid-columns));
+    right: auto;
   }
 }
 
@@ -128,22 +140,25 @@
   padding-right: (@gutter / 2);
 
   @media (min-width: @screen-lg-min) {
-    float: left;
+    float: right;
     width: percentage((@columns / @grid-columns));
   }
 }
 .make-lg-column-offset(@columns) {
   @media (min-width: @screen-lg-min) {
-    margin-left: percentage((@columns / @grid-columns));
+    margin-right: percentage((@columns / @grid-columns));
+    margin-left: 0;
   }
 }
 .make-lg-column-push(@columns) {
   @media (min-width: @screen-lg-min) {
-    left: percentage((@columns / @grid-columns));
+    right: percentage((@columns / @grid-columns));
+    left: auto;
   }
 }
 .make-lg-column-pull(@columns) {
   @media (min-width: @screen-lg-min) {
-    right: percentage((@columns / @grid-columns));
+    left: percentage((@columns / @grid-columns));
+    right: auto;
   }
 }

@@ -16,8 +16,8 @@
   "scripts": {
     "test": "grunt test"
   },
-  "style": "dist/css/bootstrap.css",
-  "less": "less/bootstrap.less",
+  "style": ["dist/css/bootstrap.css", "dist/css/bootstrap-rtl.css"],
+  "less": ["less/bootstrap.less","less/bootstrap-rtl/bootstrap-rtl.less"],
   "main": "./dist/js/npm",
   "repository": {
     "type": "git",
