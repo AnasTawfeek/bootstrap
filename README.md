@@ -1,5 +1,4 @@
 # [Bootstrap](http://getbootstrap.com)
 
-New Media queries breakpoint with the class .col-xxs-*.
-
-Upcoming: RTL Version.
+1. New Media queries breakpoint with the class .col-xxs-*.
+2. RTL version based on the original BootStrap LESS files, Just overwriting the different styles.
